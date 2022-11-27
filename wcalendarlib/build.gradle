@@ -14,7 +14,7 @@ android {
         minSdk 33
         targetSdk 33
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -42,6 +42,10 @@ android {
 
     // Run in terminal: ./gradlew assembleRelease
     project.archivesBaseName = "WCalendarLib-v$defaultConfig.versionName"
+
+    publishing {
+        singleVariant("release")
+    }
 }
 
 dependencies {
@@ -68,13 +72,20 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
 }
+
+task generateSourcesJar(type: Jar){
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
+                from components.release
                 groupId = 'com.github.winniecake'
                 artifactId = 'custom-calendar'
-                version = '1.0.1'
+                version = android.defaultConfig.versionName
             }
         }
     }
