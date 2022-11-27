@@ -1,4 +1,4 @@
-package com.winniecake.wcalendarlib
+package com.winniecake.wcalendarlib.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -25,6 +25,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
+import com.winniecake.wcalendarlib.R
 import com.winniecake.wcalendarlib.ui.theme.*
 import com.winniecake.wcalendarlib.ui.view.*
 import com.winniecake.wcalendarlib.ui.view.OneWeekScreen

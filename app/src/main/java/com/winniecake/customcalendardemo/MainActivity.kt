@@ -32,7 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.winniecake.customcalendardemo.ui.theme.CustomCalendarDemoTheme
-import com.winniecake.wcalendarlib.WCalendar
+import com.winniecake.wcalendarlib.ui.WCalendar
 import com.winniecake.wcalendarlib.ui.theme.WCalendarPeriod
 import com.winniecake.wcalendarlib.ui.theme.WCalendarStartDayOfWeek
 import com.winniecake.wcalendarlib.ui.theme.WCalendarThemeName
@@ -193,7 +193,7 @@ fun DayInfo(
         verticalArrangement = Arrangement.Center
     ) {
 
-        val dayOfWeekName = stringArrayResource(id = com.winniecake.wcalendarlib.R.array.dayOfWeek)
+        val dayOfWeekName = stringArrayResource(id = R.array.dayOfWeek)
         // title
         Row(
             modifier = Modifier

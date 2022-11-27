@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Custom Calendar Demo</string>
+    <string-array name="dayOfWeek">
+        <item>Mon</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </string-array>
 </resources>
